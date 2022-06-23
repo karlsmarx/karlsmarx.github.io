@@ -1,0 +1,144 @@
+@import "./variables.scss";
+
+.about {
+    display: flex;
+    text-align: left;
+    padding: 5rem;
+    justify-content: center;
+
+    background: $secondary-color;
+    color: #000000;
+}
+
+.resume {
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "text image"
+        "text image";
+    gap: 1rem 2rem;
+    justify-content: space-around;
+
+    width: 130rem;
+    padding: 0.3rem;
+    align-self: center;
+    font: 2rem $font-stack;
+    font-weight: 100;
+
+    @media #{$phone-query} {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "text"
+            "image";
+        gap: 2rem 2rem;
+    }
+}
+
+.resume-text {
+    grid-area: text;
+
+    width: 50rem;
+    justify-self: center;
+
+    @media #{$phone-query} {
+        grid-area: text;
+
+        width: 80rem;
+        justify-self: center;
+    }
+
+    &__title {
+        color: $primary-color;
+        font-size: 5rem;
+        display: inline-block;
+        margin-right: 1.5rem;
+
+        @media #{$phone-query} {
+            font-size: 11rem;
+        }
+    }
+
+    &__subtitle {
+        font: 5rem $font-stack;
+        font-weight: 500;
+
+        @media #{$phone-query} {
+            font-size: 11rem;
+        }
+    }
+
+    &__intro {
+        font: 2rem $font-stack;
+        font-weight: 100;
+        line-height: 2.3rem;
+        margin: 2rem 0;
+
+        @media #{$phone-query} {
+            font-size: 4rem;
+            line-height: 4rem;
+        }
+    }
+
+    &__more {
+        font: 2.5rem $font-stack;
+        line-height: 2.8rem;
+        font-weight: 100;
+        text-align: justify;
+        margin: 1.5rem 0;
+
+        &-link {
+            color: $primary-color;
+            text-decoration: none;
+        }
+
+        @media #{$phone-query} {
+            font-size: 5.65rem;
+            line-height: 6rem;
+        }
+    }
+
+    &__call {
+        font: 1.5rem $font-stack;
+        line-height: 2rem;
+        font-weight: 500;
+        text-align: justify;
+        margin: 4rem 0;
+
+        @media #{$phone-query} {
+            font-size: 4rem;
+            line-height: 2rem;
+        }
+
+        &__button {
+            line-height: 1;
+            display: inline-block;
+
+            border: .2rem solid $primary-color;
+            padding: .7rem;
+            text-decoration: none;
+            color: #000000;
+
+            &:hover {
+                background-color: $primary-color;
+                color: $secondary-color;
+            }
+        }
+    }
+}
+
+.resume-image {
+    grid-area: image;
+
+    img {
+        display: inline-block;
+        width: 100%;
+        margin-left: 1rem;
+
+        align-self: center;
+        justify-self: center;
+
+        @media #{$phone-query} {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,42 @@
+@import "./variables.scss";
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 10px;
+	margin: 0;
+
+	@media #{$phone-query} {
+		font-size: 3px;
+	}
+
+	@media #{$tablet-query} {
+		font-size: 6px;
+	}
+}
+
+body {
+	@media #{$phone-query} {
+		overflow-x: hidden;
+		width: 100vw;
+	}
+
+	@media #{$tablet-query} {
+		overflow-x: hidden;
+		width: 100vw;
+	}
+}
+
+.thin {
+	width: auto;
+	height: 1px;
+	margin: 5rem 0;
+	background: #ffffff;
+	border: none;
+}

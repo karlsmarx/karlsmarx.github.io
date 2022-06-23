@@ -1,0 +1,107 @@
+.roll {
+	animation: spin 2s ease-in-out 1;
+}
+
+.slide-menu {
+	animation: slide-menu .5s ease-in 1 forwards;
+
+	top: 0;
+	right: -30rem;
+}
+
+.hide-menu {
+	animation: hide-menu .5s ease-in 1 forwards;
+
+	top: 0;
+	right: 0rem;
+	position: fixed;
+}
+
+.hide-content {
+	animation: hide-content .5s ease-in 1 forwards;
+
+	top: 0;
+	right: 30rem;
+	position: relative;
+}
+
+@-moz-keyframes spin {
+	100% {
+		-moz-transform: rotate(360deg);
+	}
+}
+
+@-webkit-keyframes spin {
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
+}
+
+@keyframes spin {
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
+@-moz-keyframes slide-menu {
+	100% {
+		-moz-transform: translate(-30rem);
+	}
+}
+
+@-webkit-keyframes slide-menu {
+	100% {
+		-webkit-transform: translate(-30rem);
+	}
+}
+
+@keyframes slide-menu {
+	100% {
+		-webkit-transform: translate(-30rem);
+		transform: translate(-30rem);
+	}
+}
+
+@-moz-keyframes hide-menu {
+	100% {
+		-moz-transform: translate(30rem);
+	}
+}
+
+@-webkit-keyframes hide-menu {
+	100% {
+		-webkit-transform: translate(30rem);
+	}
+}
+
+@keyframes hide-menu {
+	100% {
+		-webkit-transform: translate(30rem);
+		transform: translate(30rem);
+	}
+}
+
+@-moz-keyframes hide-content {
+	100% {
+		-moz-transform: translate(30rem);
+	}
+}
+
+@-webkit-keyframes hide-content {
+	100% {
+		-webkit-transform: translate(30rem);
+	}
+}
+
+@keyframes hide-content {
+	100% {
+		-webkit-transform: translate(30rem);
+		transform: translate(30rem);
+	}
+}
+
+@keyframes blink-caret {
+	from, to { opacity: 0; }
+	50% { opacity: 100%; }
+}

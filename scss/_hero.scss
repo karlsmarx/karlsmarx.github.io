@@ -1,0 +1,105 @@
+@import "./variables.scss";
+
+$console-font: Helvetica,
+sans-serif;
+
+.common-title {
+    margin: 0 0 0 0.8rem;
+    padding: 0.3rem;
+    align-self: center;
+    position: absolute;
+}
+
+.hero {
+    text-align: center;
+    padding: 5rem 0;
+    background: $primary-color;
+    color: $secondary-color;
+    position: relative;
+
+    h1 {
+        @extend .common-title;
+        font: 10rem $console-font;
+        top: 20rem;
+        left: 2rem;
+    }
+
+    h2 {
+        @extend .common-title;
+        font: 3rem $console-font;
+        top: 26rem;
+        left: 5.3rem;
+    }
+
+    h3 {
+        @extend .common-title;
+        font: 2rem $console-font;
+        top: 30rem;
+        left: 3rem;
+    }
+
+    .info {
+        position: absolute;
+        text-align: right;
+        font: 2rem $console-font;
+        line-height: 2.7rem;
+        top: 20rem;
+        right: 2rem;
+    }
+
+    .action {
+        font: 2.5rem $console-font;
+        color: $secondary-color;
+        position: absolute;
+        top: 78vh;
+        left: 45.75vw;
+        text-decoration: none;
+    }
+
+    .hero-img {
+        width: 100rem;
+        margin: auto;
+
+        @media #{$phone-query} {
+            width: 120rem;
+            max-width: 100vw;
+        }
+    }
+
+    .terminal {
+        margin: auto;
+        padding: 0.4rem;
+        text-align: left;
+        font: 2rem Arial, serif;
+        outline: none;
+
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-55%);
+        overflow: hidden;
+
+        height: 30rem;
+        width: 50rem;
+
+        @media #{$phone-query} {
+            display: none;
+        }
+    }
+
+    .mobile-terminal {
+        @extend .terminal;
+        display: none;
+
+        @media #{$phone-query} {
+            display: block;
+            font-size: 3rem;
+            transform: translateX(-50%) translateY(-55%);
+        }
+    }
+
+    .type-blink:after {
+        content: "|";
+        animation: blink-caret .8s step-end infinite;
+    }
+}
